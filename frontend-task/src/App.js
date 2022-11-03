@@ -1,23 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import SideNav from "./components/SideNav";
-import Home from "./pages/Home/index";
-import CreateEvent from "./pages/CreateEvent/index.jsx";
-import Event from "./pages/Event/index";
+import { useState } from "react";
+
+import AddContact from "./pages/AddContact";
+import AllContacts from "./pages/AllContacts";
 import "./App.css";
 
 function App() {
+  const [users, setUsers] = useState([]);
+
+  const addUser = (user) => {
+    setUsers([...users, user]);
+  };
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <SideNav />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/create" element={<CreateEvent />} />
-          <Route path="/event" element={<Event />} />
-        </Routes>
-      </BrowserRouter>
+      <AddContact addUser={addUser} />
+      <AllContacts users={users} />
     </div>
   );
 }

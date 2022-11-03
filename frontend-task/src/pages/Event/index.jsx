@@ -6,7 +6,7 @@ import CONSTANTS from "../../utils/constants/CONSTANTS";
 
 import "./index.scss";
 
-const Event = () => {
+const AllContacts = () => {
   const eventDetails = JSON.parse(localStorage.getItem("eventInfo"));
 
   console.log("local event data=", eventDetails);
@@ -35,4 +35,4 @@ const Event = () => {
     </div>
   );
 };
-export default Event;
+export default AllContacts;
