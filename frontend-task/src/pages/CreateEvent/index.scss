@@ -1,0 +1,132 @@
+@use "../../assets/styles/index" as *;
+
+.create-event {
+  height: 100vh;
+  background-color: $light-purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .main-text {
+    text-align: center;
+
+    text-align: center;
+
+    padding-top: 20px;
+    .dark-text {
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 64px;
+      @media #{$bp-md} {
+        font-size: 50px;
+      }
+      line-height: 64px;
+      color: #240d57;
+    }
+    .section-bottom {
+      margin-bottom: 20px;
+    }
+    .gradient-text {
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 64px;
+      @media #{$bp-md} {
+        font-size: 50px;
+      }
+      line-height: 74px;
+
+      background: -webkit-linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .summary-text {
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      @media #{$bp-md} {
+        font-size: 20px;
+      }
+      line-height: 28px;
+
+      color: #4f4f4f;
+    }
+  }
+  .event-form {
+    display: flex;
+    justify-content: center;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        .form-input-label {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 4px;
+          font-size: $font-md;
+          .required {
+            color: red;
+          }
+        }
+        .form-input {
+          width: 300px;
+          height: 40px;
+          @media #{$bp-md} {
+            width: 280px;
+          }
+          @media #{$bp-sm} {
+            width: 250px;
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: $spacing-md;
+        border-radius: 4px;
+
+        .send-message-button {
+          color: #ffffff;
+          background-color: $light-purple;
+          width: 100%;
+          height: 50px;
+          text-decoration: none;
+          border: none;
+          font-size: $font-sm + 0.2rem;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+        .white {
+          background-color: #ffffff;
+          color: $light-purple;
+          width: 170%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: auto;
+        }
+        .grey {
+          background-color: #d3d3d3;
+          cursor: default;
+        }
+      }
+      .create-btn {
+        background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+        width: 300px;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: $font-lg;
+        padding: 8px;
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+html {
+  font-size: 85%;
+}
+
+@media screen and (max-width: 2500px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

@@ -1,0 +1,55 @@
+@use "../../assets/styles/index" as *;
+
+.event-page {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+  @media #{$bp-sm} {
+    margin-top: 0px;
+  }
+
+  @media #{$bp-md} {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .birthday-img {
+    width: 400px;
+    margin-left: 40px;
+    @media #{$bp-md} {
+      margin-left: 0px;
+    }
+    @media #{$bp-sm} {
+      margin-left: 0px;
+      width: 100vw;
+    }
+  }
+  .text-content {
+    margin-right: 40px;
+    .event-title {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: $font-2xl;
+      color: $black;
+    }
+    .tagline {
+      font-size: $font-md;
+      color: #828282;
+      margin-bottom: 20px;
+    }
+    .image-text {
+      display: flex;
+      .icon-img {
+        margin-right: 4px;
+      }
+      .group-text {
+        margin-left: 4px;
+        font-size: $font-md;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

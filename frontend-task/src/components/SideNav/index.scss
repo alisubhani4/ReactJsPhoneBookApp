@@ -1,0 +1,56 @@
+@use "../../assets/styles/index" as *;
+
+.sidenav {
+  height: 100%;
+  width: 40vw;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  background-color: $light-purple;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+  @media #{$bp-xs} {
+    width: 60vw;
+  }
+
+  .options {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: $font-md;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px;
+    gap: 12px;
+    .option {
+      color: #240d57;
+    }
+  }
+  .option {
+    color: white;
+  }
+  .option:hover {
+    text-decoration: underline;
+  }
+}
+.ham-icon {
+  .ham-menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 1000px) {
+  .ham-icon {
+    display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .sidenav {
+    display: none;
+  }
+}

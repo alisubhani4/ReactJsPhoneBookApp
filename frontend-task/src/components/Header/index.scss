@@ -1,0 +1,50 @@
+@use '../../assets/styles/index' as *;
+
+.header-container {
+  .header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 2;
+    background-color: $light-purple;
+    margin-bottom: 2px;
+
+    .options {
+      min-width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .option {
+        // padding: $spacing-xs $spacing-md;
+        padding: 14px 16px;
+        cursor: pointer;
+        display: flex;
+        gap: 8px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: $font-sm + 0.2rem;
+        line-height: 21px;
+        color: #240d57;
+      }
+      .option:hover {
+        color: #92929d;
+      }
+      .selected {
+        color: $light-purple;
+        text-decoration: underline solid $light-purple 3px;
+        text-underline-offset: 3rem;
+        @media #{$bp-lg} {
+          text-underline-offset: 4rem;
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+      .options {
+        display: none;
+      }
+    }
+  }
+}
